@@ -4,9 +4,11 @@ import { ApiProvider } from './api/ApiProvider';
 
 function App() {
   return (
+    <div className="App" data-testid="apptestid">
     <ApiProvider>
-      <FrontPage />
-    </ApiProvider>
+    <FrontPage />
+  </ApiProvider>
+  </div>
   );
 }
 

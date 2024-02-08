@@ -4,8 +4,8 @@ import axios from "axios";
 interface Launch {
   flight_number: number;
   mission_name: string;
-  mission_id: string[];
-  launch_year: number;
+  mission_id: string;
+  launch_year: string; 
   launch_success: boolean;
   rocket?: {
     first_stage: {
@@ -83,7 +83,9 @@ export const ApiProvider: React.FC<ApiProviderProps> = ({ children }) => {
   };
 
   return (
-    <ApiContext.Provider value={apiContextValue}>{children}</ApiContext.Provider>
+    <ApiContext.Provider data-testid="apiprovider" value={apiContextValue}>
+      {children}
+    </ApiContext.Provider>
   );
 };
 
