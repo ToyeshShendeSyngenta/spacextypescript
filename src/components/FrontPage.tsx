@@ -76,13 +76,14 @@ const FrontPage: React.FC = () => {
             <div className="filter-subsection1">
               <h4>Successful Launch</h4>
               <CustomButton
-                data-testid="launchbutton"
+                data-testid="launchbuttont"
                 className={filters.launchSuccess ? "active" : ""}
                 onClick={() => handleFilterChange("launchSuccess", true)}
               >
                 True
               </CustomButton>
               <CustomButton
+              data-testid="launchbuttonf"
                 className={filters.launchSuccess === false ? "active" : ""}
                 onClick={() => handleFilterChange("launchSuccess", false)}
               >
@@ -92,13 +93,14 @@ const FrontPage: React.FC = () => {
             <div className="filter-subsection1">
               <h4>Successful Landing</h4>
               <CustomButton
-                data-testid="landbutton"
+                data-testid="landbuttont"
                 className={filters.landSuccess ? "active" : ""}
                 onClick={() => handleFilterChange("landSuccess", true)}
               >
               True
               </CustomButton>
               <CustomButton
+              data-testid="landbuttonf"
                 className={filters.landSuccess === false ? "active" : ""}
                 onClick={() => handleFilterChange("landSuccess", false)}
               >
